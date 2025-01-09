@@ -1,0 +1,1 @@
+# prayer_time_autosilent

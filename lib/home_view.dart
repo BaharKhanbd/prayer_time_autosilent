@@ -116,7 +116,7 @@ class _HomeViewState extends State<HomeView> {
                 ],
               ),
               SizedBox(
-                height: 16.h,
+                height: 12.h,
               ),
               Align(
                 alignment: Alignment.centerLeft,

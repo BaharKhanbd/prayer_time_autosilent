@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:prayer_time_autosilent/edit_view.dart';
+import 'package:prayer_time_autosilent/edit_view_two.dart';
 import 'package:prayer_time_autosilent/utilities/assets_manager.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 
@@ -38,13 +40,21 @@ class _HomeViewState extends State<HomeView> {
         actions: [
           Padding(
             padding: EdgeInsets.only(right: 12.w),
-            child: SvgPicture.asset(
-              ImageAssets.appbarMenuIcon,
-              height: 24.h,
-              width: 24.w,
-              color: Colors.black,
-              placeholderBuilder: (BuildContext context) =>
-                  Icon(Icons.error, size: 24.sp),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => EditViewTwo()),
+                );
+              },
+              child: SvgPicture.asset(
+                ImageAssets.appbarMenuIcon,
+                height: 24.h,
+                width: 24.w,
+                color: Colors.black,
+                placeholderBuilder: (BuildContext context) =>
+                    Icon(Icons.error, size: 24.sp),
+              ),
             ),
           ),
         ],

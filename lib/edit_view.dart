@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class EditPage extends StatefulWidget {
   final Map<String, String> prayer;
 
-  EditPage({required this.prayer});
+  const EditPage({super.key, required this.prayer});
 
   @override
   _EditPageState createState() => _EditPageState();
